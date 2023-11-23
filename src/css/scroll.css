@@ -1,21 +1,48 @@
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000000;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #f1f1f1;
-  }
+:root {
+  --back: rgb(0, 0, 0);
+  --thumb: #f1f1f1;
+  --tHover: #afafaf;
+}
 
-  
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #afafaf;
-  }
+
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--back);      /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumb);    /* color of the scroll thumb */
+  border-radius: 5px;
+}
+
+body {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: var(--thumb);   /* scroll thumb and track */
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumb);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--back);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--thumb);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tHover);
+}
