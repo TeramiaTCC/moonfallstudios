@@ -20,6 +20,7 @@ function Home() {
         <main>
             <section > 
                 <img src={Moon} alt='moon' height={600}/>
+                <h1>WOW</h1>
             </section> 
         </main>
 
