@@ -18,5 +18,44 @@ body {
           linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
           var(--dot-color);
+          margin: 0;
+          min-height: 200vh;
+          font-size: 0;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-out;
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .list {
+    list-style-type: none;
+    margin-left: auto;
+    display: none;
+    @media (min-width: 640px) {
+      display: flex;
+    }
+    li {
+      margin-left: 20px;
+    }
+  }
